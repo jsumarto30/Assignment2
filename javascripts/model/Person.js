@@ -9,11 +9,11 @@ test = (function() {
 	var class3 = new Grade('Language Arts','B');
 	var class4 = new Grade('Science','A');
 
-	var student_list = new Array();
-  student_list.push(student1);
-	student_list.push(student2);
-	student_list.push(student3);
-	console.log(student_list);
+	//var student_list = new Array();
+  //student_list.push(student1);
+	//student_list.push(student2);
+	//student_list.push(student3);
+	//console.log(student_list);
 /*
 	var report_card = new Array();
 	report_card.push(class1);
@@ -39,11 +39,11 @@ test = (function() {
 
 	//Create student name and grades for Amy Gonzalez
 	var student1 = new Person('Amy','Gonzalez');
-	objPerson.add(class1);
-	objPerson.add(class2);
-	objPerson.add(class3);
-	objPerson.add(class4);
-	//console.log(objPerson);
+	student1.add(class1);
+	student1.add(class2);
+	student1.add(class3);
+	student1.add(class4);
+	console.log(student1);
 	//
 	Person.prototype.getString = function() {
 		return this.first_name + " " + this.last_name;
