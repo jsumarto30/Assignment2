@@ -1,24 +1,35 @@
-(function (window) {
-  'use strict';
-  var App = window.App || {};
-  var student = new Array();
-/*
-  function Person(){
-    console.log('Running the Person Function');
-    this.student = {};
-  }
-*/
+test = (function() {
+	var student = new Array();
 
-  function Person(fn, ln){
-    this.first_name = fn;
-    this.last_name = ln;
-  }
+	function Person(fn, ln) {
+		this.first_name = fn;
+		this.last_name = ln;
+	}
+	//
+	Person.prototype.getString = function() {
+		return this.first_name + " " + this.last_name;
+	}
 
-  Person.prototype.add = function (stu) {
-    student.push(stu);
-    console.log(student);
-  };
+	// return the list of Person objects created
+	Person.prototype.getAllPerson = function() {
+		return student;
+	}
+	// add the newly created Person object to the list
+	Person.prototype.add = function(p_obj) {
+		student.push(p_obj);
+		// console.log(student);
+	}
 
-  App.Person = Person;
-  window.App = App;
-})(window);
+
+	if (window.testApp == undefined) {
+		window.testApp = {};
+	}
+
+	if (window.testApp.model == undefined) {
+		window.testApp.model = {};
+	}
+
+	window.testApp.model.Person = Person;
+
+	return window.testApp;
+})();
