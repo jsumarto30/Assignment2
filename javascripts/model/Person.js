@@ -1,6 +1,7 @@
 test = (function() {
+
 	var student_list = new Array();
-  student_list.push(new Person('Any','Gonzalez'));
+  student_list.push(new Person('Amy','Gonzalez'));
 	student_list.push(new Person('Tony','Gonzalez'));
 	student_list.push(new Person('Brett','Gonzalez'));
 	console.log(student_list);
