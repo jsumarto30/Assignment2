@@ -1,14 +1,35 @@
 test = (function() {
 
+	var student1 = new Person('Amy','Gonzalez');
+	var student2 = new Person('Tony','Gonzalez');
+	var student3 = new Person('Brett','Gonzalez');
+
+	var class1 = new Grade('Social Studies','B');
+	var class2 = new Grade('Math','A');
+	var class3 = new Grade('Language Arts','B');
+	var class4 = new Grade('Science','A');
+
 	var student_list = new Array();
-  student_list.push(new Person('Amy','Gonzalez'));
-	student_list.push(new Person('Tony','Gonzalez'));
-	student_list.push(new Person('Brett','Gonzalez'));
+  student_list.push(student1);
+	student_list.push(student2);
+	student_list.push(student3);
 	console.log(student_list);
+
+	var report_card = new Array();
+	report_card.push(class1);
+	report_card.push(class2);
+	report_card.push(class3);
+	report_card.push(class4);
+	console.log(report_card);
 
 	function Person(fn, ln) {
 		this.first_name = fn;
 		this.last_name = ln;
+	}
+
+	function Grade(cn, lg){
+		this.class_name = cn;
+		this.letter_grade = lg;
 	}
 	//
 	Person.prototype.getString = function() {
