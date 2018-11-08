@@ -1,6 +1,9 @@
 test = (function() {
-	var student = new Array();
-  student.push(new Person('John','Chen'));
+	var student_list = new Array();
+  student_list.push(new Person('Any','Gonzalez'));
+	student_list.push(new Person('Tony','Gonzalez'));
+	student_list.push(new Person('Brett','Gonzalez'));
+	console.log(student_list);
 
 	function Person(fn, ln) {
 		this.first_name = fn;
