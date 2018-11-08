@@ -1,5 +1,6 @@
 test = (function() {
 	var student = new Array();
+  student.push(new Person('John','Chen'));
 
 	function Person(fn, ln) {
 		this.first_name = fn;
@@ -14,12 +15,14 @@ test = (function() {
 	Person.prototype.getAllPerson = function() {
 		return student;
 	}
+
+/*
 	// add the newly created Person object to the list
 	Person.prototype.add = function(p_obj) {
 		student.push(p_obj);
 		// console.log(student);
 	}
-
+*/
 
 	if (window.testApp == undefined) {
 		window.testApp = {};
