@@ -1,4 +1,4 @@
 Assignment 2
 Jonathan Sumarto
 
-Work with Dominic and Zachary McEachern
+Work with Dominik Feeley and Zachary McEachern
