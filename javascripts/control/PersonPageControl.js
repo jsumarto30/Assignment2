@@ -2,6 +2,21 @@ var createPerson = (function() {
 
 // Option 1 - Use addEventListener to register event handler
 	function PersonPageControl() {
+		/* Prof's code
+		var add_elm = document.getElementById('add_person_id');
+		// define the event handler for Add button
+		add_elm.addEventListener('click', function(event) {
+			// Get the input and create a Person (model) object.
+			var fn = document.getElementById('fn_id').value;
+			var ln = document.getElementById('ln_id').value;
+			console.log(test);
+			var p_obj = new test.model.Person(fn, ln);
+			p_obj.add(p_obj);
+			// Create the view
+  			var list_view = new test.view.ListView(p_obj.getAllPerson());
+		});
+*/
+		// THIS IS MY NEW STUFF THAT I AM ADDING.
 
 		// link the search button to a JS variable.
 		var search_elm = document.getElementById('search_person_id');
@@ -20,10 +35,33 @@ var createPerson = (function() {
 
 			// create the view... HOW????
 			var list_view = new test.view.ListView(found_list);
+		});
 
+		// link the list item to a JS variable.
+
+		function getEventTarget(e) {
+        e = e || window.event;
+        return e.target || e.srcElement;
+    }
+		var list_elm = document.getElementById('person_list_id');
+    list_elm.onclick = function(event) {
+        var target = getEventTarget(event);
+        alert(target.innerHTML);
+    };
+
+		// define a new event handler for the search button.
+		list_elm.addEventListener('click', function(event){
+			console.log("the list item was clicked and activated the eventHandler");
+
+			// grab the grades from the student that was clicked within the list.
+			var student_name = target.innerHTML;
+			console.log(student_name);
+			// put those grades into an array of grades which it should already be in.
+
+			// send that list of grades to the TableView.
+			var list_view = new test.view.TableView(found_list);
 		});
 	}
-
 	// make sure the page is fully loaded before registering event handler
 	window.addEventListener('load', function(event) {
 		PersonPageControl();

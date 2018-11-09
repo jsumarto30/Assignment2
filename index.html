@@ -9,12 +9,19 @@
     <script src='javascripts/control/PersonPageControl.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
     <script id="p-list-template" type="text/x-handlebars-template">
-      <ul onclick="student_grade">
-        {{#each people}}
-      	<li>{{first_name}} {{last_name}}</li>
-      	{{/each}}
-      </ul>
+    	{{#each people}}
+    	<li>{{first_name}} {{last_name}}</li>
+    	{{/each}}
     </script>
+
+    <script id="s-grade-template" type="text/x-handlebars-template">
+    	{{#each grade}}
+    	<tr>
+        <td>{{class_name}}</td> <td>{{letter_grade}}</td>
+      </tr>
+    	{{/each}}
+    </script>
+  
   </head>
   <body>
 
@@ -28,10 +35,10 @@
   	</ul>
 
     <b>Grades for "Student":</b><br>
-    <table border="1px">
+    <table id="grade_table_id" border="1px">
       <tr>
         <th>Course</th>
-        <th>GPA</th>
+        <th>Grade</th>
       </tr>
     </table>
   </body>
