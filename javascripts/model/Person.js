@@ -1,4 +1,5 @@
-var studentData = (function() {
+test = (function() {
+	var person_set = new Array();
 
 	function Person(fn, ln) {
 		this.first_name = fn;
@@ -16,7 +17,7 @@ var studentData = (function() {
 	}
 
 	//Create student name and grades for Amy Gonzalez
-	var student1 = new Person('Amy','Gonzalez');
+	var student1 = new Person('Amy','Smith');
 	student1.add(new Grade('Social Studies','B'));
 	student1.add(new Grade('Math','A'));
 	student1.add(new Grade('Language Arts','B'));
@@ -37,28 +38,44 @@ var studentData = (function() {
 	student3.add(new Grade('Science','A'));
 
 	// Create Array of Students
-	var student_list = new Array();
-  student_list.push(student1);
-	student_list.push(student2);
-	student_list.push(student3);
-	console.log(student_list);
+	var person_set = new Array();
 
+	person_set.push(student1);
+ 	person_set.push(student2);
+ 	person_set.push(student3);
+ 	console.log(person_set);
+	//
 	Person.prototype.getString = function() {
 		return this.first_name + " " + this.last_name;
 	}
 
+	// return the last name of Person
+	Person.prototype.getLastName = function () {
+		return this.last_name;
+	}
+
 	// return the list of Person objects created
 	Person.prototype.getAllPerson = function() {
-		return student;
+		return person_set;
+	}
+	// add the newly created Person object to the list
+	Person.prototype.add = function(p_obj) {
+		person_set.push(p_obj);
+		// console.log(person_set);
 	}
 
 /*
-	// add the newly created Person object to the list
-	Person.prototype.add = function(p_obj) {
-		student.push(p_obj);
-		// console.log(student);
+	Person.prototype.searchStudent = function(last_name) {
+		console.log("invoking the searchStudent function");
+		var found_students = new Array();
+		for (let person of person_set) {
+			if (person.getLastName() == last_name) {
+				found_students.push(person);
+			}
+		}
+		return found_students;
 	}
-*/
+	*/
 
 	if (window.testApp == undefined) {
 		window.testApp = {};

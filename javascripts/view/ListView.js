@@ -1,11 +1,8 @@
-
 test = ( function () {
 	//
-
-	var names = studentData.student1;
-	
-
 	function ListView(data) {
+		console.log("data");
+		console.log(data);
 		var ul_node = document.getElementById('person_list_id');
 		this.root = ul_node;
 		this.content = data;
@@ -23,10 +20,10 @@ test = ( function () {
 		}
 
 		// Option 1
-		this.createChildNodeDOMApi();
+		//this.createChildNodeDOMApi();
 
 		// Option 2
-		// this.createChildNodeHandlebars();
+		this.createChildNodeHandlebars();
 	}
 /*
 	ListView.prototype.createChildNodeDOMApi = function() {
@@ -42,7 +39,8 @@ test = ( function () {
 			this.root.appendChild(li_node);
 		}
 	}
-*/
+	*/
+
 	if (window.testApp == undefined) {
 		window.testApp = {};
 	}

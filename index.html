@@ -3,16 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Student Grades</title>
+    <script src='javascripts/globalVars.js'></script>
     <script src='javascripts/model/Person.js'></script>
     <script src='javascripts/view/ListView.js'></script>
+    <script src='javascripts/control/PersonPageControl.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+    <script id="p-list-template" type="text/x-handlebars-template">
+      <ul onclick="student_grade">
+        {{#each people}}
+      	<li>{{first_name}} {{last_name}}</li>
+      	{{/each}}
+      </ul>
+    </script>
   </head>
-
   <body>
 
     <b>Last Name:</b>
-      <input id="ln_id" type="text" name="last_name" data-attr="last_name">
-      <input id="search_person_id" type="submit" name="search" value="Search">
+    <input id="ln_id" type="text" name="last_name" data-attr="last_name">
+    <input id="search_person_id" type="submit" name="search" value="Search">
+    <br>
+
     <b>Students Found:</b><br>
+    <ul id='person_list_id'>
+  	</ul>
 
     <b>Grades for "Student":</b><br>
     <table border="1px">
@@ -21,6 +34,5 @@
         <th>GPA</th>
       </tr>
     </table>
-
   </body>
 </html>
