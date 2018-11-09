@@ -1,3 +1,8 @@
+/*
+Jonathan Sumarto
+CPSC 473 - Assignment 2
+*/
+
 test = (function() {
 	var person_set = new Array();
 
@@ -14,6 +19,30 @@ test = (function() {
 	function Grade(cn, lg){
 		this.class_name = cn;
 		this.letter_grade = lg;
+	}
+
+	Person.prototype.getString = function() {
+		return this.first_name + " " + this.last_name;
+	}
+
+	// return the last name of Person
+	Person.prototype.getLastName = function () {
+		return this.last_name;
+	}
+
+	// return the list of Person objects created
+	Person.prototype.getAllPerson = function() {
+		return person_set;
+	}
+	// add the newly created Person object to the list
+	Person.prototype.add = function(p_obj) {
+		person_set.push(p_obj);
+		// console.log(person_set);
+	}
+
+	// return the report card of the student.
+	Person.prototype.getReportCard = function () {
+		return this.report_card;
 	}
 
 	//Create student name and grades for Amy Gonzalez
@@ -39,37 +68,10 @@ test = (function() {
 
 	// Create Array of Students
 	var person_set = new Array();
-
 	person_set.push(student1);
  	person_set.push(student2);
  	person_set.push(student3);
  	console.log(person_set);
-
-	
-	Person.prototype.getString = function() {
-		return this.first_name + " " + this.last_name;
-	}
-
-	// return the last name of Person
-	Person.prototype.getLastName = function () {
-		return this.last_name;
-	}
-
-	// return the list of Person objects created
-	Person.prototype.getAllPerson = function() {
-		return person_set;
-	}
-	// add the newly created Person object to the list
-	Person.prototype.add = function(p_obj) {
-		person_set.push(p_obj);
-		// console.log(person_set);
-	}
-
-	// return the report card of the student.
-	Person.prototype.getReportCard = function () {
-		return this.report_card;
-	}
-
 
 	if (window.testApp == undefined) {
 		window.testApp = {};

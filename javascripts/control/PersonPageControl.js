@@ -1,3 +1,8 @@
+/*
+Jonathan Sumarto
+CPSC 473 - Assignment 2
+*/
+
 var createPerson = (function() {
 
 	function PersonPageControl() {
@@ -29,7 +34,6 @@ var createPerson = (function() {
 		// the onclick function handles what li item that is being clicked.
 		list_elm.onclick = function(event) {
 				var target = getEventTarget(event);
-				alert(target.innerHTML);
 
 				console.log("the list item was clicked and activated the eventHandler");
 

@@ -1,5 +1,11 @@
+/*
+Jonathan Sumarto
+CPSC 473 - Assignment 2
+*/
+
 test = ( function () {
-	//
+
+	//displays the list of individuals for the searched last names
 	function ListView(data) {
 		console.log("data");
 		console.log(data);
@@ -18,13 +24,10 @@ test = ( function () {
 		this.createChildNodeHandlebars();
 	}
 
-		// this is the View module for the table grade layout.
-		// the data being passed to this would be the array of grades.
+		//displays the list of grades for selected individuals
 		function TableView(data) {
 			console.log("data");
 			console.log(data);
-
-			//need to change to table stuff.
 			var table_node = document.getElementById('grade_table_id');
 			this.root = table_node;
 			this.content = data;
@@ -43,11 +46,9 @@ test = ( function () {
 	if (window.testApp == undefined) {
 		window.testApp = {};
 	}
-
 	if (window.testApp.view == undefined) {
 		window.testApp.view = {};
 	}
-
 	window.testApp.view.ListView = ListView;
 
 	return window.testApp;

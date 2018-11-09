@@ -1,3 +1,8 @@
+/*
+Jonathan Sumarto
+CPSC 473 - Assignment 2
+*/
+
 test = ( function () {
 	//
 		// this is the View module for the table grade layout.
@@ -13,28 +18,22 @@ test = ( function () {
 
 			this.createChildNodeHandlebars = function() {
 				console.log('Invoking createChildNodeHandlebars method');
-				//console.log(this.root);
 				var source = document.getElementById('s-grade-template').innerHTML;
 				var template = Handlebars.compile(source);
 				var context = {'grade' : this.content};
-				//console.log(context);
 				var html_str = template(context);
-				//console.log(html_str);
 				this.root.innerHTML = html_str;
 			}
 			this.createChildNodeHandlebars();
 		}
 
 
-
 	if (window.testApp == undefined) {
 		window.testApp = {};
 	}
-
 	if (window.testApp.view == undefined) {
 		window.testApp.view = {};
 	}
-
 	window.testApp.view.TableView = TableView;
 
 	return window.testApp;
