@@ -44,7 +44,8 @@ test = (function() {
  	person_set.push(student2);
  	person_set.push(student3);
  	console.log(person_set);
-	//
+
+	
 	Person.prototype.getString = function() {
 		return this.first_name + " " + this.last_name;
 	}
@@ -69,18 +70,6 @@ test = (function() {
 		return this.report_card;
 	}
 
-/*
-	Person.prototype.searchStudent = function(last_name) {
-		console.log("invoking the searchStudent function");
-		var found_students = new Array();
-		for (let person of person_set) {
-			if (person.getLastName() == last_name) {
-				found_students.push(person);
-			}
-		}
-		return found_students;
-	}
-	*/
 
 	if (window.testApp == undefined) {
 		window.testApp = {};

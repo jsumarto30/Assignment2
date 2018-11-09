@@ -6,6 +6,7 @@
     <script src='javascripts/globalVars.js'></script>
     <script src='javascripts/model/Person.js'></script>
     <script src='javascripts/view/ListView.js'></script>
+    <script src='javascripts/view/TableView.js'></script>
     <script src='javascripts/control/PersonPageControl.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
     <script id="p-list-template" type="text/x-handlebars-template">
@@ -13,7 +14,6 @@
     	<li>{{first_name}} {{last_name}}</li>
     	{{/each}}
     </script>
-
     <script id="s-grade-template" type="text/x-handlebars-template">
     	{{#each grade}}
     	<tr>
@@ -21,7 +21,6 @@
       </tr>
     	{{/each}}
     </script>
-  
   </head>
   <body>
 
