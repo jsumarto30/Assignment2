@@ -8,3 +8,5 @@ Amy Smith
 Tony Gonzalez
 Brett Gonzalez
 
+*All searches are capital letter sensitive *
+
