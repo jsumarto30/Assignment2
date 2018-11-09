@@ -1,27 +1,5 @@
-test = (function() {
+var studentData = (function() {
 
-	//var student1 = new Person('Amy','Gonzalez');
-	var student2 = new Person('Tony','Gonzalez');
-	var student3 = new Person('Brett','Gonzalez');
-
-	var class1 = new Grade('Social Studies','B');
-	var class2 = new Grade('Math','A');
-	var class3 = new Grade('Language Arts','B');
-	var class4 = new Grade('Science','A');
-
-	//var student_list = new Array();
-  //student_list.push(student1);
-	//student_list.push(student2);
-	//student_list.push(student3);
-	//console.log(student_list);
-/*
-	var report_card = new Array();
-	report_card.push(class1);
-	report_card.push(class2);
-	report_card.push(class3);
-	report_card.push(class4);
-	console.log(report_card);
-*/
 	function Person(fn, ln) {
 		this.first_name = fn;
 		this.last_name = ln;
@@ -39,12 +17,32 @@ test = (function() {
 
 	//Create student name and grades for Amy Gonzalez
 	var student1 = new Person('Amy','Gonzalez');
-	student1.add(class1);
-	student1.add(class2);
-	student1.add(class3);
-	student1.add(class4);
-	console.log(student1);
-	//
+	student1.add(new Grade('Social Studies','B'));
+	student1.add(new Grade('Math','A'));
+	student1.add(new Grade('Language Arts','B'));
+	student1.add(new Grade('Science','A'));
+
+	//Create student name and grades for Tony Gonzalez
+	var student2 = new Person('Tony','Gonzalez');
+	student2.add(new Grade('Social Studies','A'));
+	student2.add(new Grade('Math','A'));
+	student2.add(new Grade('Language Arts','A'));
+	student2.add(new Grade('Science','A'));
+
+	//Create student name and grades for Brett Gonzalez
+	var student3 = new Person('Brett','Gonzalez');
+	student3.add(new Grade('Social Studies','C'));
+	student3.add(new Grade('Math','B'));
+	student3.add(new Grade('Language Arts','B'));
+	student3.add(new Grade('Science','A'));
+
+	// Create Array of Students
+	var student_list = new Array();
+  student_list.push(student1);
+	student_list.push(student2);
+	student_list.push(student3);
+	console.log(student_list);
+
 	Person.prototype.getString = function() {
 		return this.first_name + " " + this.last_name;
 	}

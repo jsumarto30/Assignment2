@@ -1,6 +1,10 @@
 
 test = ( function () {
 	//
+
+	var names = studentData.student1;
+	
+
 	function ListView(data) {
 		var ul_node = document.getElementById('person_list_id');
 		this.root = ul_node;
@@ -24,7 +28,7 @@ test = ( function () {
 		// Option 2
 		// this.createChildNodeHandlebars();
 	}
-
+/*
 	ListView.prototype.createChildNodeDOMApi = function() {
 		// empty child nodes
 		while (this.root.firstChild) {
@@ -38,7 +42,7 @@ test = ( function () {
 			this.root.appendChild(li_node);
 		}
 	}
-
+*/
 	if (window.testApp == undefined) {
 		window.testApp = {};
 	}
