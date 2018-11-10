@@ -24,24 +24,6 @@ test = ( function () {
 		this.createChildNodeHandlebars();
 	}
 
-		//displays the list of grades for selected individuals
-		function TableView(data) {
-			console.log("data");
-			console.log(data);
-			var table_node = document.getElementById('grade_table_id');
-			this.root = table_node;
-			this.content = data;
-
-			this.createChildNodeHandlebars = function() {
-				console.log('Invoking createChildNodeHandlebars method');
-				var source = document.getElementById('s-grade-template').innerHTML;
-				var template = Handlebars.compile(source);
-				var context = {'grade' : this.content};
-				var html_str = template(context);
-				this.root.innerHTML = html_str;
-			}
-			this.createChildNodeHandlebars();
-		}
 
 	if (window.testApp == undefined) {
 		window.testApp = {};

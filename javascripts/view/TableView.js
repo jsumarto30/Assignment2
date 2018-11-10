@@ -4,7 +4,6 @@ CPSC 473 - Assignment 2
 */
 
 test = ( function () {
-	//
 		// this is the View module for the table grade layout.
 		// the data being passed to this would be the array of grades.
 		function TableView(data) {
